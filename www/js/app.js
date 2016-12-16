@@ -48,23 +48,25 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
 
   })
+  
+ 
 
-  .state('app.Sample Form', {
-    url: '/SampleForm',
+  .state('app.gohome', {
+    url: '/gohome',
     views: {
       'menuContent': {
-        templateUrl: 'templates/SampleForm.html',
-        controller: 'SampleFormCtrl'
+        templateUrl: 'templates/gohome.html',
+        controller: 'gohomeCtrl'
       }
     }
   })
 
-  .state('app.Sample AJAX', {
-    url: '/SampleAJAX',
+  .state('app.Home', {
+    url: '/Home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/SampleAJAX.html',
-        controller: 'SampleAJAXCtrl'
+        templateUrl: 'templates/Home.html',
+        controller: 'HomeCtrl'
       }
     }
   })
