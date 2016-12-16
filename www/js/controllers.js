@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
             .then(data => {
                 if (data.data.loggedIn)
                 {
-                    window.uname = uname;
+                    window.uname = details.uname;
                     $location.path('/app/gohome');
                 }
                 else {
@@ -70,8 +70,6 @@ angular.module('starter.controllers', [])
         var fileUpload = document.getElementById('fileUpload');
 
         function doUpload() {
-            $scope.formData.reporter = window.uname;
-
             $http.post('http://localhost:4000/createPost/', $scope.formData)
                 .then(data => {
                     if (data.data.success)
@@ -113,7 +111,6 @@ angular.module('starter.controllers', [])
 //controller for Logout
 .controller('LogoutCtrl', function($scope, $location) {
     $scope.logout = function() {
-        window.uname = undefined;
         $location.path('/login');
     }
 });
