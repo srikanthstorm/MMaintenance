@@ -1,5 +1,5 @@
 <ion-view view-title="New Registration" name="SignUp" ng-controller="SignUpCtrl">
-    <ion-content>
+    <ion-content  class="padding home-background">
         <ion-header-bar class="bar-stable  bar-balanced	" align-title="center">
             <h1 class="title">New Registration</h1>
         </ion-header-bar>
@@ -12,17 +12,14 @@
                 <label class="item item-input item-stacked-label">
                     <input type="text" placeholder="email" ng-model="formData.mail">
                 </label>
-                <div class="row responsive-sm">
-                    <div class="col">
                         <label class="item item-input item-stacked-label">
                             <span class="inpt-label"></span>
                             <input type="text" placeholder="firstname" ng-model="formData.fname">
-                        </label></div>
-                        <div class="col">
+                        </label>
                             <label class="item item-input item-stacked-label">
                                 <input type="text" placeholder="lastname" ng-model="formData.lname">
-                            </label></div>
-                        </div>
+                            </label>
+                        
 
                         <label class="item item-input item-stacked-label">
                             <input type="text" placeholder="phonenumber" ng-model="formData.mno">
