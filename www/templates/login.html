@@ -18,9 +18,8 @@
 
             <input type="password" name="password" ng-model="formData.pwd" id="pswd" placeholder="password" required>
           </label>
-        </div>
-      </div>
-      <div style="color:white;">
+            
+            <div style="color:white;">
         <span ng-show="myForm.username.$touched && myForm.username.$invalid || myForm.password.$touched && myForm.password.$invalid">These fields are required.</span>
       </div>
 
@@ -28,13 +27,16 @@
         <ion-checkbox ng-click="rememberme()">Remember Me </ion-checkbox>
       </div>
 <div class="button-bar">
-      <button class="button button-positive button-block" value="Login" ng-click="Login()">
+      <button class="button button-stable button-block" value="Login" ng-click="Login()">
         Login
       </button>
-         <button class="button button-balanced button-block" value="signup" ng-click="signup()">
+         <button class="button button-positive button-block" value="signup" ng-click="signup()">
         SignUp
       </button>
         </div>
+        </div>
+      </div>
+      
     </form>
   </ion-content>
 

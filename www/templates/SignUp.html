@@ -1,18 +1,15 @@
 <ion-view view-title="New Registration" name="SignUp" ng-controller="SignUpCtrl">
-    <ion-content  class="padding home-background">
-        <ion-header-bar class="bar-stable  bar-balanced	" align-title="center">
+    <ion-header-bar class="bar bar-stable  bar-positive	" align-title="center">
             <h1 class="title">New Registration</h1>
         </ion-header-bar>
+    <ion-content  class="padding home-background">
+        
         <!--Text Field-->
-        <br>
-        <br>
-        <br>
+       
         <div class="card">
             <form>
+                
                 <label class="item item-input item-stacked-label">
-                    <input type="text" placeholder="email" ng-model="formData.mail">
-                </label>
-                        <label class="item item-input item-stacked-label">
                             <span class="inpt-label"></span>
                             <input type="text" placeholder="firstname" ng-model="formData.fname">
                         </label>
@@ -20,20 +17,24 @@
                                 <input type="text" placeholder="lastname" ng-model="formData.lname">
                             </label>
 
-
-                        <label class="item item-input item-stacked-label">
-                            <input type="text" placeholder="phonenumber" ng-model="formData.mno">
-
-                        </label>
-
-                        <label class="item item-input item-stacked-label">
+                
+                      <label class="item item-input item-stacked-label">
                             <input type="text" placeholder="username" ng-model="formData.uname">
                         </label>
 
                         <label class="item item-input item-stacked-label">
                             <input type="text" placeholder="designation" ng-model="formData.desg">
                         </label>
+                
+                <label class="item item-input item-stacked-label">
+                            <input type="text" placeholder="phonenumber" ng-model="formData.mno">
 
+                        </label>
+                
+                <label class="item item-input item-stacked-label">
+                    <input type="text" placeholder="email" ng-model="formData.mail">
+                </label>
+                        
                         <label class="item item-input item-stacked-label">
                             <input type="password" placeholder="password" ng-model="formData.pwd">
 
@@ -42,7 +43,7 @@
                         </label>
                     </form>
                 </div>
-                <button class="button button-balanced button-block" value="gohome" ng-click="gohome()">
+                <button class="button button-positive button-block" value="gohome" ng-click="gohome()">
                     SignUp
                 </button>
             </ion-content>

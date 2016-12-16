@@ -1,5 +1,10 @@
 <ion-view view-title="Home" ng-controller='HomeCtrl'>
-  <ion-content class="padding">
-      
+      <ion-header-bar class="bar-light bar-subheader">
+      <input type="text" placeholder="Search Force" data-ng-model="searchForce">
+      <button ng-if="searchForce.length" class="button button-icon ion-android-close input-button" ng-click="clearSearch()">
+      </button>
+</ion-header-bar>
+      <ion-content class="padding">
+
   </ion-content>
 </ion-view>
