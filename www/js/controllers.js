@@ -14,6 +14,16 @@ angular.module('starter.controllers', [])
       })
     }
   }
+  
+    $scope.signup = function() {
+$location.path('/signup');
+      }
+
+})
+//controller for signup
+.controller('SignUpCtrl', function($scope, $location, $ionicPopup) {
+    
+
 })
 
 //controller for Sample Form
