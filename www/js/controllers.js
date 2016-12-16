@@ -6,7 +6,7 @@ angular.module('starter.controllers', [])
     var uname = document.getElementById('name').value;
     var pword = document.getElementById('pswd').value;
     if (uname == "Admin" && pword == "Admin") {
-      $location.path('/app/SampleForm');
+      $location.path('/app/gohome');
     } else {
       $ionicPopup.confirm({
         title: "Miracle ME alerts you",
@@ -26,14 +26,14 @@ $location.path('/signup');
 
 })
 
-//controller for Sample Form
-.controller('SampleFormCtrl', function($scope, $http) {
+//controller for  Form
+.controller('gohomeCtrl', function($scope, $http) {
 
 
 })
 
 //controller for Sample AJAX
-.controller('SampleAJAXCtrl', function($scope) {
+.controller('HomeCtrl', function($scope) {
 
 })
 

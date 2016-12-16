@@ -1,0 +1,31 @@
+<ion-view view-title="Post" ng-controller='gohomeCtrl'>
+    <ion-content class="padding">
+    <label class = "item item-input item-select">
+    <div class = "input-label responsive-sm">
+     Maintenance
+   </div>
+   <select>
+      <option>plumber</option>
+      <option selected>carpenter</option>
+      <option>Electrician</option><option>Flooring</option>
+       <option>Kitchen Repair</option>
+       <option>BoreWell Repair</option>
+      <option>System Repair</option>
+      <option selected>Laptop Repair</option>
+      <option>Electrician</option><option>Sanitation</option>
+   </select>
+</label>
+<ion-item>
+   <ion-label>Problem Description</ion-label>
+    
+   <textarea rows="6"></textarea>
+ </ion-item>
+      <button class="button button-positive button-block " value="Login" ng-click="Login()">
+        upload
+      </button>
+         <button class="button button-balanced button-block" value="signup" ng-click="signup()">
+        post
+      </button>
+    
+    </ion-content>
+</ion-view>
