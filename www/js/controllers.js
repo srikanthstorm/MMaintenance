@@ -34,8 +34,8 @@ angular.module('starter.controllers', [])
             pwd: $scope.formData.pwd
         };
 
-        console.log(details);
         $http.post('http://localhost:4000/signup/', details);
+        $http.path('/login');
     };
 })
 
