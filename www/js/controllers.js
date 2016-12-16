@@ -13,7 +13,10 @@ angular.module('starter.controllers', [])
         $http.post('http://localhost:4000/login/', details)
             .then(data => {
                 if (data.data.loggedIn)
+                {
+                    window.uname = uname;
                     $location.path('/app/gohome');
+                }
                 else {
                     $ionicPopup.alert({
                         title: "Miracle ME alerts you",
@@ -39,7 +42,8 @@ angular.module('starter.controllers', [])
             lname: $scope.formData.lname,
             mail: $scope.formData.mail,
             mno: $scope.formData.mno,
-            pwd: $scope.formData.pwd
+            pwd: $scope.formData.pwd,
+            desg: $scope.formData.desg
         };
 
         $http.post('http://localhost:4000/signup/', details)
@@ -58,10 +62,43 @@ angular.module('starter.controllers', [])
 }])
 
 //controller for  Form
-.controller('gohomeCtrl', function($scope, $http) {
+.controller('gohomeCtrl', ['$scope', '$location', '$http', '$ionicPopup', function($scope, $location, $http, $ionicPopup) {
+    $scope.formData = {};
+    $scope.formData.assignee = 'Admin';
 
+    $scope.createIssue = () => {
+        var fileUpload = document.getElementById('fileUpload');
 
-})
+        function doUpload() {
+            $scope.formData.reporter = window.uname;
+
+            $http.post('http://localhost:4000/createPost/', $scope.formData)
+                .then(data => {
+                    if (data.data.success)
+                        $location.path('/app/gohome');
+                    else {
+                        $ionicPopup.alert({
+                            title: "Miracle ME alerts you",
+                            content: "Failed to create post: " + data.data.details
+                        });
+                    }
+                })
+                .catch(err => console.error(err));
+        }
+
+        if (fileUpload.files && fileUpload.files[0]) {
+            var fr = new FileReader();
+            fr.onload = e => {
+                $scope.formData.image = e.target.result;
+                document.getElementById('imageView').src = e.target.result;
+                doUpload();
+            };
+
+            fr.readAsDataURL(fileUpload.files[0]);
+        }
+        else doUpload();
+    };
+}])
 
 //controller for Sample AJAX
 .controller('HomeCtrl', function($scope) {
@@ -76,6 +113,7 @@ angular.module('starter.controllers', [])
 //controller for Logout
 .controller('LogoutCtrl', function($scope, $location) {
     $scope.logout = function() {
+        window.uname = undefined;
         $location.path('/login');
     }
 });
