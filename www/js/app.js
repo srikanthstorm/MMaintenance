@@ -35,7 +35,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/login.html',
     controller: 'LoginCtrl'
   })
-  
+
   .state('signup', {
       url: '/signup',
       templateUrl: 'templates/SignUp.html',
@@ -48,8 +48,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
 
   })
-  
- 
+
+
 
   .state('app.gohome', {
     url: '/gohome',
@@ -69,17 +69,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'HomeCtrl'
       }
     }
-  })
-  
-  .state('app.SampleList', {
-    url: '/SampleList',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/SampleList.html',
-        controller: 'SampleListCtrl'
-      }
-    }
-  })
+});
 
 
   // if none of the above states are matched, use this as the fallback
